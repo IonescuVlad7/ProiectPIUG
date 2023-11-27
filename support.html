@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metin 2</title>
+    <link rel="stylesheet" href="styles-light.css" id="stylesheet">
+    <style>
+        .center-box {
+            width: 600px;
+            height: 200px;
+            flex-grow: 1;
+            background-color: #fff;
+            margin-top: 63.5%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Hide any content that overflows the box */
+        }
+
+        /* Additional styles for the support center box */
+        .support-center-box {
+            width: 500px; /* Adjust the width for the support page */
+            height: auto; /* Allow the box to adjust its height based on content */
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-mode-btn" onclick="toggleMode()">
+        <img id="mode-icon" img src="Darkmode.png" alt="Toggle Mode">
+    </button>
+    <div class="social-buttons">
+        <a href="#" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+    </div>
+    <button id="scroll-to-top" onclick="scrollToTop()">Top</button>
+    <button id="scroll-to-bottom" onclick="scrollToBottom()">Bottom</button>
+    <div class="curved-text">
+        <div class="carousel-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+                <text x="50%" y="50%" text-anchor="middle" font-size="60" fill="#fff">
+                    <textPath href="#curve" startOffset="5%">Metin 2</textPath>
+                </text>
+                <path id="curve" d="M0 150 Q150 50 300 150" fill="transparent" />
+            </svg>
+        </div>                 
+    </div>
+    
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="slide">
+            <img class="image" src="1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img class="image" src="2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <div class="video-container">
+                <video class="video" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="slide">
+            <img class="image" src="3.jpg" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img class="image" src="4.jpg" alt="Image 4">
+        </div>
+    </div>
+    <div class="navbar">
+        <div>
+            <a href="index.html">News</a>
+            <a href="download.html">Download</a>
+        </div>
+        <div>
+            <a href="support.html" class="active">Support</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- Three Boxes below the Carousel -->
+    <div class="box left-box" id="left-box-content">
+        <div class="login-container">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button id="login-btn">Login</button>
+            <p>N-ai cont? <a href="#">Inregistreaza-te</a></p>
+        </div>
+    </div>
+    <div class="box center-box" id="center-box-content">
+        <div class="center-box support-center-box">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="validateForm(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+                
+                <label for="cnp">CNP:</label>
+                <input type="text" id="cnp" name="cnp" pattern="[0-9]{13}" placeholder="e.g., 1234567890123" required>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="box right-box" id="right-box-content">
+        <div class="right-box-content">
+            <h2>Statistici</h2>
+            <p>Playeri curenti: 30</p>
+            <p>Guilde curente: 3</p>
+            <p>Level mediu: 50</p>
+        </div>
+    </div>
+</body>
+</html>

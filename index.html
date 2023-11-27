@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metin 2</title>
+    <link rel="stylesheet" href="styles-light.css" id="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <button id="toggle-mode-btn" onclick="toggleMode()">
+        <img id="mode-icon" img src="Darkmode.png" alt="Toggle Mode">
+    </button>
+    <div class="social-buttons">
+        <a href="#" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+    </div>
+    <button id="scroll-to-top" onclick="scrollToTop()">Top</button>
+    <button id="scroll-to-bottom" onclick="scrollToBottom()">Bottom</button>
+    <div class="curved-text">
+        <div class="carousel-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+                <text x="50%" y="50%" text-anchor="middle" font-size="60" fill="#fff">
+                    <textPath href="#curve" startOffset="5%">Metin 2</textPath>
+                </text>
+                <path id="curve" d="M0 150 Q150 50 300 150" fill="transparent" />
+            </svg>
+        </div>                 
+    </div>
+    
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="slide">
+            <img class="image" src="1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img class="image" src="2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <div class="video-container">
+                <video class="video" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="play-button">&#9658;</div>
+            </div>
+        </div>
+        <div class="slide">
+            <img class="image" src="3.jpg" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img class="image" src="4.jpg" alt="Image 4">
+        </div>
+    </div>
+    <div class="navbar">
+        <div>
+            <a href="index.html" class="active">News</a>
+            <a href="download.html">Download</a>
+        </div>
+        <div>
+            <a href="support.html">Support</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search...">
+        <button onclick="search()">Search</button>
+    </div>
+
+    <!-- Three Boxes below the Carousel -->
+    <div class="box left-box" id="left-box-content">
+        <div class="login-container">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button id="login-btn">Login</button>
+            <p>N-ai cont? <a href="#">Inregistreaza-te</a></p>
+        </div>
+    </div>
+    <div class="box center-box" id="center-box-content">
+        <h2>News</h2>
+        <p>Here is some random text for your news section. You can replace this with your actual news content.</p>
+        <img src="background.jpg" alt="News Image" class="center-content img">
+        <p>More useless text.</p>
+    </div>
+    <div class="box right-box" id="right-box-content">
+        <div class="right-box-content">
+            <h2>Statistici</h2>
+            <p>Playeri curenti: 30</p>
+            <p>Guilde curente: 3</p>
+            <p>Level mediu: 50</p>
+        </div>
+    </div>
+</body>
+</html>
